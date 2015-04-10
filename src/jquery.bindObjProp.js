@@ -1,10 +1,12 @@
 (function($){
+    'use strict';
+
     $.fn.bindObjProp = (function(){
         var elements = [];
 
         return function(obj, property, fn) {
             var $this = this,
-                curVal, i;
+                curVal;
 
             elements.push($this);
 
@@ -13,11 +15,11 @@
                 if (fn && typeof fn === 'function') {
                     val = fn(val);
                 }
-                for (i in elements) {
-                    if (elements[i] instanceof $) {
-                        $.each(elements[i], function(){
+                $.each(elements, function(index, $el) {
+                    if ($el instanceof $) {
+                        $el.each(function(){
                             var $cur = $(this);
-                            
+
                             if ($cur.is(':input')) {
                                 $cur.val(val);
                             } else {
@@ -25,7 +27,7 @@
                             }
                         });
                     }
-                }
+                });
             }
 
             updateHtml(obj[property]);

@@ -6,7 +6,7 @@ QUnit.test( "Single entity bind test", function(assert) {
     var $entities = $('.group'),
         obj = {a: 1};
 
-    QUnit.expect(8);
+    QUnit.expect($entities.length * 2);
     
     $entities.each(function(){
         var $this = $(this);
@@ -24,6 +24,8 @@ QUnit.test( "Single entity bind test", function(assert) {
 QUnit.test( "Multiple entities bind test", function(assert) {
     var $entities = $('.group'),
         obj = {a: 1};
+
+    QUnit.expect($entities.length * 2);
 
     $entities.bindObjProp(obj, 'a');
     $entities.each(function(){
