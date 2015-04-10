@@ -1,0 +1,35 @@
+{
+  "name": "jquery.bindObjProp",
+  "version": "0.0.1",
+  "description": "Simple one way data binding jQuery plugin.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "grunt qunit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/antyblin/jquery.bindObjProp"
+  },
+  "keywords": [
+    "jquery",
+    "plugin",
+    "one",
+    "way",
+    "data",
+    "binding"
+  ],
+  "author": "antyblin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/antyblin/jquery.bindObjProp/issues"
+  },
+  "homepage": "https://github.com/antyblin/jquery.bindObjProp",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-qunit": "^0.7.0",
+    "grunt-contrib-watch": "^0.3.1"
+  }
+}
