@@ -18,12 +18,17 @@ module.exports = function(grunt) {
                     'src/jquery.bindObjProp.min.js': ['src/jquery.bindObjProp.js']
                 }
             }
+        },
+        watch: {
+            files: ['tests/index.html', 'src/jquery.bindObjProp.js'],
+            tasks: ['default']
         }
     });
 
-    grunt.loadNpmTasks('grunt-contrib-qunit');
     grunt.loadNpmTasks('grunt-eslint');
+    grunt.loadNpmTasks('grunt-contrib-qunit');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.registerTask('default', ['eslint', 'qunit']);
     grunt.registerTask('min', ['uglify']);
